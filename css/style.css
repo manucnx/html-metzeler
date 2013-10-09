@@ -1,0 +1,157 @@
+
+@charset "UTF-8";
+
+*:active {
+	outline: 0 none !important;
+	
+}
+
+
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('font/bebasneue-webfont.eot');
+    src: url('font/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/bebasneue-webfont.woff') format('woff'),
+         url('font/bebasneue-webfont.ttf') format('truetype'),
+         url('font/bebasneue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	color: #004491;
+	font-size:12px;
+	font-family: 'bebas_neueregular';
+}
+a img {border:0;}
+.logo {margin-left:20px;}
+.header {background: url(../assets/header-hp.jpg);height:296px;}
+.page {width:810px; overflow:hidden;}
+.box {float:left; margin: 30px 25px 0 25px; width:320px; text-align:center;}
+.content {background: url(../assets/content.png); overflow:hidden;height:566px; padding:0 30px;}
+.content .title {padding-left:30px;}
+.title {padding:40px 100px 0 0;}
+.title h1 {font-size:29px; margin-top:0;}
+.title p {line-height:18px;}
+.related {background: url(../assets/bg-related.jpg); height:545px;}
+.box-related {margin:30px 0 0  0;}
+.related {padding: 0 40px 0 55px;}
+.related .title {color:#fff;font-size:14px}
+.text p {font-size:14px; line-height: 17px;}
+.box-thumb {
+	float:left; 
+	margin:8px 10px 0 0;
+    height: 168px;
+    overflow: hidden;
+    position: relative;
+    width: 168px;} 
+	
+.boxcaption {	    
+	float: left;
+    height: 152px;
+    opacity: 0.9;
+    position: absolute;
+    width: 152px;
+    z-index: 10;
+	border:8px solid #0094f9;	
+}
+
+
+/** carica **/
+
+.carica .header {background: url(../assets/header-carica.jpg);height:296px;}
+.carica .content {background: url("../assets/bg-carica.png"); padding: 0 55px 30px 55px; height:auto;}
+.carica .title p {font-size:14px;}
+.left-thumb {width:321px; float:left; margin-right:55px;}
+.right-user-data {width:321px; float:left;}
+.img-carica {background: url(../assets/bg-immagine.jpg); width:321px; heigt:244px;}
+.img-carica img {margin:16px;}
+.form {overflow:hidden;color:#333333; margin-top:30px;}
+.form input {width:300px; margin-top:5px; padding:8px; font-weight:bold;}
+.form a {color: #004491;}
+.checkbox input {width: auto;}
+.carica .title {padding-left:0;}
+.first input {margin:0 ; width:130px; float:left;}
+.cella {margin-top:20px;}
+.buttons {margin: 125px 0;}
+.buttons input {margin:0 auto;display:block;text-align:center;}
+.privacy { text-align:center;}
+.privacy h2 {font-size:21px;}
+.privacy p {color:#666666;}
+.form .upload {background: url("../assets/upload.png");display: block; width: 54px; height:22px;float:left;}
+.left-thumb label {float:left; font-size: 14px; margin-top:20px;}
+.cella.first {width:150px; float:left; margin:0; display:block;}
+.cella.first.right {float:right;}
+.user {
+    overflow: hidden;
+}
+.cella.first input {margin-top:5px;}
+/** custom **/
+.custom .header {background: url("../assets/bg-custom.jpg");height:672px;}
+.social{padding:300px 0 0 55px; width: 500px;float: left;}
+.social h1 {font-size:54px; color: #0094f9; margin:0;}
+.social h2 {font-size:34px; color:#fff;line-height:34px; margin:0;}
+.social h3 {font-size:28px;color:#00438f; margin:0;}
+.social h3 span {color:#0094f9;}
+.social h3.title-top{margin-top:40px;}
+.share {float: left; width: 250px; margin-top:470px;}
+
+/** racing **/
+.racing .header {background: url("../assets/bg-racing.jpg");height:672px;}
+
+/**errore**/
+.flash {color:#C00; font-size:15px;text-align:center;}
+
+input.uploader {
+	background: url('../assets/input_boxes.gif') no-repeat 0 -58px;
+	border: none;
+	width: 241px;
+	height: 20px;
+	padding-left: 3px;
+	padding-top: 3px;
+}
+
+input.uploader:focus {
+	background-color: transparent;
+}
+
+.fileinputs {
+	position: relative;
+	height: 40px;
+	width: 300px;
+	margin-top:20px;
+}
+input.file {
+	width: 300px;
+	margin: 0;
+}
+
+input.file.hidden {
+	position: relative;
+	text-align: right;
+	-moz-opacity:0 ;
+	filter:alpha(opacity: 0);
+	opacity: 0;
+	z-index: 2;
+	
+}
+.fakefile {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 321px;
+	padding: 0;
+	margin: 0;
+	z-index: 1;
+	line-height: 90%;
+}
+
+.fakefile input {
+	margin: 0 0 5px 0;
+	padding:0 0 0 5px;
+	width:200px;
+	height:35px;
+}
