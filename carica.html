@@ -4,65 +4,124 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Documento senza titolo</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
 
+var W3CDOM = (document.createElement && document.getElementsByTagName);
+window.onload=initFileUploads;
+function initFileUploads() {
+	if (!W3CDOM) return;
+	var fakeFileUpload = document.createElement('div');
+	fakeFileUpload.className = 'fakefile';
+	fakeFileUpload.appendChild(document.createElement('input'));
+	var image = document.createElement('img');
+	image.src='assets/button_select.png';
+	fakeFileUpload.appendChild(image);
+	var x = document.getElementsByTagName('input');
+	for (var i=0;i<x.length;i++) {
+		if (x[i].type != 'file') continue;
+		if (x[i].parentNode.className != 'fileinputs') continue;
+		x[i].className = 'file hidden';
+		var clone = fakeFileUpload.cloneNode(true);
+		x[i].parentNode.appendChild(clone);
+		x[i].relatedElement = clone.getElementsByTagName('input')[0];
+		x[i].onchange = x[i].onmouseout = function () {
+			this.relatedElement.value = this.value;
+		}
+	}
+}
+</script>
 </head>
 
 <body>
 <div class="page carica">
 	<div class="header"><div class="logo"><img src="assets/logo.png" width="181" height="51"  alt=""/></div></div>
+   
     <div class="content">
     	<div class="title">
+
         	<h1>CArica la tua foto</h1>
             <p>Registrati e carica la tua foto accompagnata dal titolo della canzone che meglio rappresenta 
 lo spirito con cui vivi le due ruote.</p>
         </div>
       <div class="form">
+      
+      <!-- inizio modifiche  --> <!-- inizio modifiche  --> <!-- inizio modifiche  -->
+      
        	  <div class="left-thumb">
             	<div class="img-carica">
                 	<img src="assets/racing.jpg" width="290" height="212"  alt=""/>
             </div>
-             <input id="titolo" name="nome" class="small-input required" placeholder="Titolo della canzone" type="text" value=""/> 
-                <label>Carica la tua foto</label>
-				<input id="foto" name="Carica la tua foto" class="required" placeholder="Carica la tua foto" type="image" value="Carica la tua foto"/>
-               
+            <label>Titolo della canzone</label>
+			<input id="titolo" name="titolo" class="small-input required" type="text" value=""/> 
+            
+            <label>Artista</label>
+			<input id="artista" name="artista" class="small-input required" type="text" value=""/>
+                
+            <div class="fileinputs">
+                <label>Selezionare un'immagine</label>
+                <input class="uploader" type="file" >
+			</div>
+                
         </div>
             
             <div class="right-user-data">
-           	                  <div class="cella">
-                    <input id="nome" name="nome" class="small-input required" placeholder="nome" type="text" value=""/>
-                    <input id="cognome" name="cognome" class="small-input required" placeholder="cognome" type="text" value=""/>
+           	  <div class="user">
+                <div class="cella first">
+               		 <label>Nome</label>
+                    <input id="nome" name="nome" class=""  type="text" value=""/>
+                </div>
+                <div class="cella first right">
+                	<label>Cognome</label>
+                	<input id="cognome" name="cognome" class=""  type="text" value=""/>
+                </div>
+               </div>
+                
+                <div class="cella">
+                <label>E-mail</label>
+                  <input id="e-mail" name="e-mail" class="" type="text" value=""/>
                 </div>
                 
                 <div class="cella">
-                    <input id="e-mail" name="e-mail" class="small-input required" placeholder="e-mail" type="text" value=""/>
+               		 <label>Indirizzo</label>
+                  <input id="indirizzo" name="indirizzo" class="" type="text" value=""/>
                 </div>
                 
                 <div class="cella">
-                    <input id="indirizzo" name="indirizzo" class="small-input required" placeholder="indirizzo" type="text" value=""/>
+               		 <label>Cap</label>
+                  <input id="cap" name="cap" class="" type="text" value=""/>
                 </div>
                 
-                <div class="cella">
-                    <input id="cap" name="cap" class="small-input required" placeholder="cap" type="text" value=""/>
+                 <div class="cella checkbox">
+                     
+                   <input id="informativa" name="informativa" type="checkbox">
+                     <label>Accetto <a href="assets/informativa.pdf">termini e condizioni</a></label>
                 </div>
-                
-                 <div class="cella">
-                     <input id="informativa" name="informativa" type="checkbox">
-                     <label>Accetto <a href="#">termini e condizioni</a></label>
-                </div>
-                
-            </div>
                 
             </div>
 
         </div>
-        
+       
         <div class="buttons">
+        <div class="flash"><p>Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor</p></div>
         
+         <!-- fine modifiche  --> <!-- fine modifiche  --> <!-- fine modifiche  -->
+         
 				<input type="image" src="assets/invia.png" class="btn-img btn-invia" value="invia" />
 			</div>
         <div class="privacy">
         	<h2>TERMINI E CONDIZIONI</h2>
-            <p>Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent.</p>     
+      <!-- inizio modifiche  --> <!-- inizio modifiche  --> <!-- inizio modifiche  -->       
+            
+            <p>Metzeler si riserva il diritto di selezionare, a suo insindacabile giudizio, 10 utenti della 
+
+Fanpage Metzeler Italia che potranno partecipare alla presentazione esclusiva il giorno 
+
+5 Novembre 2013 a Milano. La suddetta partecipazione è interamente a carico del 
+
+partecipante: tutte le spese, incluse quelle di viaggio e trasferta saranno sostenute per intero 
+
+dal partecipante.</p> 
+ <!-- fine modifiche  --> <!-- fine modifiche  --> <!-- fine modifiche  -->    
         </div>
     </div>
     

@@ -4,9 +4,41 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Metzeler</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
-	
+
+	<!-- Add jQuery library -->
+	<script type="text/javascript" src="js/lib/jquery-1.10.1.min.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="js/source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="js/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+			/*
+			 *  Different effects
+			 */
+
+			// Change title type, overlay closing speed
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedOut : 0
+					}
+				}
+			});
+		});
+	</script>	
   
-    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.min.js"></script>
+    
 <script type="text/javascript">
 $(document).ready(function(){
 	$(".box-thumb").hover(
@@ -29,9 +61,14 @@ $(document).ready(function(){
   	</div>
     <div class="content">
     	<div class="title">
-        	<h1>Ti senti più racing o più custom?</h1>
-            <p>Raccontaci con una foto qual è il tuo spirito. Potresti essere selezionato per l’esclusiva presentazione Metzeler 
-con due ospiti davvero speciali: Steven Tyler, leader degli Aerosmith, e Guy Martin, campione delle due ruote.</p>
+        	<h1>E tu? Sei Sport o Custom?</h1>
+            <!-- inizio modifiche  --> <!-- inizio modifiche  --> <!-- inizio modifiche  -->
+            <p>Vorresti incontrare Guy Martin, campione Road Racing e Steven Tyler, leader degli Aerosmith?</p>
+            <p><span>Raccontaci con una foto e con il titolo di una canzone qual è il tuo spirito.<br/>
+Potresti essere selezionato come special guest per partecipare, il 5 novembre, alla presentazione di due nuovi<br/>
+pneumatici Metzeler: uno Supersport e uno Custom i cui padrini saranno Guy Martin e Steven Tyler.</span></p>
+<p>Pronto a partire con Metzeler? Scegli il tuo mondo:</p>
+			<!-- fine modifiche  --> <!-- fine modifiche  --> <!-- fine modifiche  -->
         </div>
         <div class="box">
         	<div class="thumb">
@@ -45,7 +82,7 @@ con due ospiti davvero speciali: Steven Tyler, leader degli Aerosmith, e Guy Mar
         	<div class="thumb">
             	<img src="assets/custom.jpg" height="245" width="320">
             </div>
-            <div class="text"><p>l viaggio, la strada, la libertà. Per chi ama vivere ascoltando solo il proprio istinto.</p>
+            <div class="text"><p>Il viaggio, la strada, la libertà. Per chi ama vivere ascoltando solo il proprio istinto.</p>
 </div>
             <div class="bottom"><a href="#"><img src="assets/bottone-custom.png" width="167" height="37"  alt=""/></a></div>
         </div>
@@ -56,56 +93,57 @@ con due ospiti davvero speciali: Steven Tyler, leader degli Aerosmith, e Guy Mar
         	<h1>ULTIMI POST</h1>
             <p>Scopri le foto inviate dai fan Metzeler e lasciati ispirare.</p>
         </div>
-        
+        <!-- inizio modifiche  --> <!-- inizio modifiche  --> <!-- inizio modifiche  -->
      	<div class="box-related">
         	<div class="box-thumb">
-            	<img src="assets/img-related.jpg" height="168" width="168">
-                <a href="javascript:void(0)"> 
-					<div class="cover boxcaption"></div>
+            	<img src="assets/racing.jpg" height="168" width="168">
+              <a class="fancybox" href="assets/racing.jpg" data-fancybox-group="gallery" title="Lorem Lorem"> 
+					<div class="cover boxcaption"><img src="assets/_dot.gif" width="152" height="152"  alt=""/></div>
                 </a> 
             </div>
         	<div class="box-thumb">
             	<img src="assets/img-related.jpg" height="168" width="168">
-                <a href="javascript:void(0)"> 
-					<div class="cover boxcaption"></div>
+                <a class="fancybox" href="assets/racing.jpg" data-fancybox-group="gallery" title="Lorem Lorem Lorem Lorem"> 
+					<div class="cover boxcaption"><img src="assets/_dot.gif" width="152" height="152"  alt=""/></div>
                 </a> 
             </div>
             <div class="box-thumb">
             	<img src="assets/img-related.jpg" height="168" width="168">
-                <a href="javascript:void(0)"> 
-					<div class="cover boxcaption"></div>
+                <a class="fancybox" href="assets/racing.jpg" data-fancybox-group="gallery" title="Lorem Lorem Lorem Lorem Lorem Lorem"> 
+					<div class="cover boxcaption"><img src="assets/_dot.gif" width="152" height="152"  alt=""/></div>
                 </a> 
             </div>
         	<div class="box-thumb">
             	<img src="assets/img-related.jpg" height="168" width="168">
-                <a href="javascript:void(0)"> 
-					<div class="cover boxcaption"></div>
+                <a class="fancybox" href="assets/racing.jpg" data-fancybox-group="gallery" title="Lorem Lorem"> 
+					<div class="cover boxcaption"><img src="assets/_dot.gif" width="152" height="152"  alt=""/></div>
                 </a> 
            	</div>
             <div class="box-thumb">
             	<img src="assets/img-related.jpg" height="168" width="168">
-                <a href="javascript:void(0)"> 
-					<div class="cover boxcaption"></div>
+                <a class="fancybox" href="assets/racing.jpg" data-fancybox-group="gallery" title=""> 
+					<div class="cover boxcaption"><img src="assets/_dot.gif" width="152" height="152"  alt=""/></div>
                 </a> 
             </div>
         	<div class="box-thumb">
             	<img src="assets/img-related.jpg" height="168" width="168">
-                <a href="javascript:void(0)"> 
-					<div class="cover boxcaption"></div>
+                <a class="fancybox" href="assets/racing.jpg" data-fancybox-group="gallery" title=""> 
+					<div class="cover boxcaption"><img src="assets/_dot.gif" width="152" height="152"  alt=""/></div>
                 </a> 
             </div>
             <div class="box-thumb">
             	<img src="assets/img-related.jpg" height="168" width="168">
-                <a href="javascript:void(0)"> 
-					<div class="cover boxcaption"></div>
+                <a class="fancybox" href="assets/racing.jpg" data-fancybox-group="gallery" title="">
+					<div class="cover boxcaption"><img src="assets/_dot.gif" width="152" height="152"  alt=""/></div>
                 </a> 
             </div>
         	<div class="box-thumb">
             	<img src="assets/img-related.jpg" height="168" width="168">
-                <a href="javascript:void(0)"> 
-					<div class="cover boxcaption"></div>
+                <a class="fancybox" href="assets/racing.jpg" data-fancybox-group="gallery" title=""> 
+					<div class="cover boxcaption"><img src="assets/_dot.gif" width="152" height="152"  alt=""/></div>
                 </a> 
             </div>
+        <!-- fine modifiche  --><!-- fine modifiche  --><!-- fine modifiche  --><!-- fine modifiche  -->
         </div>
     </div>
     

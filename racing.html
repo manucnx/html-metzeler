@@ -6,7 +6,38 @@
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 	
     
-    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.min.js"></script>
+	<!-- Add jQuery library -->
+	<script type="text/javascript" src="js/lib/jquery-1.10.1.min.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="js/source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="js/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+			/*
+			 *  Different effects
+			 */
+
+			// Change title type, overlay closing speed
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedOut : 0
+					}
+				}
+			});
+		});
+	</script>	
 <script type="text/javascript">
 $(document).ready(function(){
 	$(".box-thumb").hover(
@@ -30,11 +61,21 @@ $(document).ready(function(){
     	<div class="logo"><img src="assets/logo.png" width="181" height="51"  alt=""/></div>
         <div class="social">
         	<h1>READY?GO.</h1>
-            <h2>ANCHE TU COME GUY MARTIN</h2>
-            <h2>HAI SCELTO DI VIVERE SEMPRE AL MASSIMO</h2>
-            <h3 class="title-top"><span>#</span>legendaryknight</h3>
-            <h3><span>#</span>RACING</h3>
+            <!-- inizio modifiche  --> <!-- inizio modifiche  --> <!-- inizio modifiche  -->
+            <h2>ANCHE TU COME GUY MARTIN HAI SCELTO DI VIVERE <br/>SEMPRE AL MASSIMO</h2>
+            <h3><span>#</span>LEGENDARYKNIGHT</h3>
+            <h3><span>#</span>SPORT</h3>
+             <!-- fine modifiche  --> <!-- fine modifiche  --> <!-- fine modifiche  -->
         </div>
+        <!-- inizio modifiche  --> <!-- inizio modifiche  --> <!-- inizio modifiche  -->
+        <div class="share"><a href="#" 
+  onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
+      'facebook-share-dialog', 
+      'width=626,height=436'); 
+    return false;"><img src="assets/share.png" width="152" height="58"  alt=""/></a></div>
+     <!-- fine modifiche  --> <!-- fine modifiche  --> <!-- fine modifiche  -->
     </div>
    
      <div class="related">
@@ -42,56 +83,57 @@ $(document).ready(function(){
         	<h1>ultimi post</h1>
             <p>Scopri le foto inviate dai fan Metzeler e lasciati ispirare.</p>
         </div>
-        
+        <!-- inizio modifiche  --> <!-- inizio modifiche  --> <!-- inizio modifiche  -->
      	<div class="box-related">
         	<div class="box-thumb">
-            	<img src="assets/img-related.jpg" height="168" width="168">
-                <a href="javascript:void(0)"> 
-					<div class="cover boxcaption"></div>
+            	<img src="assets/racing.jpg" height="168" width="168">
+              <a class="fancybox" href="assets/racing.jpg" data-fancybox-group="gallery" title="Lorem Lorem"> 
+					<div class="cover boxcaption"><img src="assets/_dot.gif" width="152" height="152"  alt=""/></div>
                 </a> 
             </div>
         	<div class="box-thumb">
             	<img src="assets/img-related.jpg" height="168" width="168">
-                <a href="javascript:void(0)"> 
-					<div class="cover boxcaption"></div>
+                <a class="fancybox" href="assets/racing.jpg" data-fancybox-group="gallery" title="Lorem Lorem Lorem Lorem"> 
+					<div class="cover boxcaption"><img src="assets/_dot.gif" width="152" height="152"  alt=""/></div>
                 </a> 
             </div>
             <div class="box-thumb">
             	<img src="assets/img-related.jpg" height="168" width="168">
-                <a href="javascript:void(0)"> 
-					<div class="cover boxcaption"></div>
+                <a class="fancybox" href="assets/racing.jpg" data-fancybox-group="gallery" title="Lorem Lorem Lorem Lorem Lorem Lorem"> 
+					<div class="cover boxcaption"><img src="assets/_dot.gif" width="152" height="152"  alt=""/></div>
                 </a> 
             </div>
         	<div class="box-thumb">
             	<img src="assets/img-related.jpg" height="168" width="168">
-                <a href="javascript:void(0)"> 
-					<div class="cover boxcaption"></div>
+                <a class="fancybox" href="assets/racing.jpg" data-fancybox-group="gallery" title="Lorem Lorem"> 
+					<div class="cover boxcaption"><img src="assets/_dot.gif" width="152" height="152"  alt=""/></div>
                 </a> 
            	</div>
             <div class="box-thumb">
             	<img src="assets/img-related.jpg" height="168" width="168">
-                <a href="javascript:void(0)"> 
-					<div class="cover boxcaption"></div>
+                <a class="fancybox" href="assets/racing.jpg" data-fancybox-group="gallery" title=""> 
+					<div class="cover boxcaption"><img src="assets/_dot.gif" width="152" height="152"  alt=""/></div>
                 </a> 
             </div>
         	<div class="box-thumb">
             	<img src="assets/img-related.jpg" height="168" width="168">
-                <a href="javascript:void(0)"> 
-					<div class="cover boxcaption"></div>
+                <a class="fancybox" href="assets/racing.jpg" data-fancybox-group="gallery" title=""> 
+					<div class="cover boxcaption"><img src="assets/_dot.gif" width="152" height="152"  alt=""/></div>
                 </a> 
             </div>
             <div class="box-thumb">
             	<img src="assets/img-related.jpg" height="168" width="168">
-                <a href="javascript:void(0)"> 
-					<div class="cover boxcaption"></div>
+                <a class="fancybox" href="assets/racing.jpg" data-fancybox-group="gallery" title="">
+					<div class="cover boxcaption"><img src="assets/_dot.gif" width="152" height="152"  alt=""/></div>
                 </a> 
             </div>
         	<div class="box-thumb">
             	<img src="assets/img-related.jpg" height="168" width="168">
-                <a href="javascript:void(0)"> 
-					<div class="cover boxcaption"></div>
+                <a class="fancybox" href="assets/racing.jpg" data-fancybox-group="gallery" title=""> 
+					<div class="cover boxcaption"><img src="assets/_dot.gif" width="152" height="152"  alt=""/></div>
                 </a> 
             </div>
+             <!-- fine modifiche  --> <!-- fine modifiche  --> <!-- fine modifiche  -->
         </div>
     </div>
     

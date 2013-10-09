@@ -5,15 +5,25 @@
 	outline: 0 none !important;
 	
 }
+@font-face {
+    font-family: 'lucida_granderegular';
+    src: url('font/6216-webfont.eot');
+    src: url('font/6216-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/6216-webfont.woff') format('woff'),
+         url('font/6216-webfont.ttf') format('truetype'),
+         url('font/6216-webfont.svg#lucida_granderegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
+}
 
 @font-face {
-    font-family: 'bebas_neueregular';
-    src: url('font/bebasneue-webfont.eot');
-    src: url('font/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
-         url('font/bebasneue-webfont.woff') format('woff'),
-         url('font/bebasneue-webfont.ttf') format('truetype'),
-         url('font/bebasneue-webfont.svg#bebas_neueregular') format('svg');
+    font-family: 'haymakerregular';
+    src: url('font/haymaker-webfont.eot');
+    src: url('font/haymaker-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/haymaker-webfont.woff') format('woff'),
+         url('font/haymaker-webfont.ttf') format('truetype'),
+         url('font/haymaker-webfont.svg#haymakerregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -24,18 +34,23 @@ body {
 	padding: 0;
 	color: #004491;
 	font-size:12px;
-	font-family: 'bebas_neueregular';
+	font-family: 'lucida_granderegular';	
 }
 a img {border:0;}
-.logo {margin-left:20px;}
-.header {background: url(../assets/header-hp.jpg);height:296px;}
+
+.logo > img {
+    display: block;
+    margin: 0 auto;
+}
+.header {background: url("../assets/header-hp.jpg");height:296px;}
 .page {width:810px; overflow:hidden;}
-.box {float:left; margin: 30px 25px 0 25px; width:320px; text-align:center;}
-.content {background: url(../assets/content.png); overflow:hidden;height:566px; padding:0 30px;}
+.box {float:left; margin: 25px 25px 0 25px; width:320px; text-align:center;}
+.content {background: url(../assets/content.png); overflow:hidden;height:586px; padding:0 30px;}
 .content .title {padding-left:30px;}
-.title {padding:40px 100px 0 0;}
-.title h1 {font-size:29px; margin-top:0;}
-.title p {line-height:18px;}
+.title {padding:40px 80px 0 0;}
+.title h1 {font-size:29px; margin-top:0; font-family: 'haymakerregular';}
+.title p {line-height:18px; margin:5px 0;}
+.title p span {color:#666666;}
 .related {background: url(../assets/bg-related.jpg); height:545px;}
 .box-related {margin:30px 0 0  0;}
 .related {padding: 0 40px 0 55px;}
@@ -56,13 +71,13 @@ a img {border:0;}
     position: absolute;
     width: 152px;
     z-index: 10;
-	border:8px solid #0094f9;	
+	border:8px solid #0094f9;
 }
 
 
 /** carica **/
 
-.carica .header {background: url(../assets/header-carica.jpg);height:296px;}
+.carica .header {background: url("../assets/header-hp.jpg");height:296px;}
 .carica .content {background: url("../assets/bg-carica.png"); padding: 0 55px 30px 55px; height:auto;}
 .carica .title p {font-size:14px;}
 .left-thumb {width:321px; float:left; margin-right:55px;}
@@ -79,7 +94,7 @@ a img {border:0;}
 .buttons {margin: 125px 0;}
 .buttons input {margin:0 auto;display:block;text-align:center;}
 .privacy { text-align:center;}
-.privacy h2 {font-size:21px;}
+.privacy h2 {font-size:21px;font-family: 'haymakerregular';}
 .privacy p {color:#666666;}
 .form .upload {background: url("../assets/upload.png");display: block; width: 54px; height:22px;float:left;}
 .left-thumb label {float:left; font-size: 14px; margin-top:20px;}
@@ -91,16 +106,15 @@ a img {border:0;}
 .cella.first input {margin-top:5px;}
 /** custom **/
 .custom .header {background: url("../assets/bg-custom.jpg");height:672px;}
-.social{padding:300px 0 0 55px; width: 500px;float: left;}
+.social{padding:300px 0 0 55px; width: 500px;float: left; font-family: 'haymakerregular';}
 .social h1 {font-size:54px; color: #0094f9; margin:0;}
-.social h2 {font-size:34px; color:#fff;line-height:34px; margin:0;}
+.social h2 {font-size:26px; color:#fff;line-height:34px; margin:20px 0;}
 .social h3 {font-size:28px;color:#00438f; margin:0;}
 .social h3 span {color:#0094f9;}
-.social h3.title-top{margin-top:40px;}
-.share {float: left; width: 250px; margin-top:470px;}
+.share {float: left; width: 250px; margin-top:485px;}
 
 /** racing **/
-.racing .header {background: url("../assets/bg-racing.jpg");height:672px;}
+.racing .header {background: url("../assets/bg-racing.jpg");height:670px;}
 
 /**errore**/
 .flash {color:#C00; font-size:15px;text-align:center;}
@@ -120,10 +134,11 @@ input.uploader:focus {
 
 .fileinputs {
 	position: relative;
-	height: 40px;
-	width: 300px;
+	height: 65px;
+	width: 321px;
 	margin-top:20px;
 }
+.fileinputs label {margin-top: 0;}
 input.file {
 	width: 300px;
 	margin: 0;
@@ -144,14 +159,18 @@ input.file.hidden {
 	left: 0px;
 	width: 321px;
 	padding: 0;
-	margin: 0;
+	margin: 25px 0 0;
 	z-index: 1;
 	line-height: 90%;
 }
 
+.fakefile img {
+    display: block;
+    float: right;	
+}
 .fakefile input {
 	margin: 0 0 5px 0;
 	padding:0 0 0 5px;
-	width:200px;
+	width:220px;
 	height:35px;
 }
